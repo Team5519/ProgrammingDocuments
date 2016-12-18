@@ -40,6 +40,11 @@ https://www.atlassian.com/git/tutorials/comparing-workflows
 # copy of the development repo. Your development branch should also be kept up to 
 # date on the GitHub server until it is ready to be merged back ito the master stream.
 
+# At the beginning of each coding session - If not already in the proper branch.
+# Note: git command line will tell you if you are in master or some other branch
+>git checkout <feature-name>
+>git pull origin <feature-name>
+
 # Make some changes -- Repeat these commands after every logical grouping of changes
 >git add -A
 >git commit -m 'Comment'
