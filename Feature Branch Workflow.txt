@@ -1,0 +1,97 @@
+This workflow is described as the "Feature Branch Workflow" at the following link:
+https://www.atlassian.com/git/tutorials/comparing-workflows
+
+# Initial Setup
+# =============
+#
+# The following should be done once if you have not already created a local copy 
+# of the Steamworks2017 development repo
+#
+#>cd to your workspece folder
+# execute the following git commands
+
+>git clone https://github.com/Team5519/Steamworks2017.git
+
+# In Eclipse do the following to add the Steamworks2017 project
+# File >> Import... >> Existing Projects Into Workspace...
+
+
+# Creating A New Branch - Starting Work On A Feature
+# ==================================================
+#
+# We will be using this workflow when team members are assigned a task to 
+# develop a feature on the rebot. This way we can have different sub-teams 
+# working on different things at the same time. The different code branches 
+# can get out of sync during feature development and then be brought into sync 
+# with the master repo as required.
+
+# Make sure you start in sync with the master
+>git pull
+>git status
+
+# Start a new branch for your feature development
+>git checkout -b <feature-name> master
+
+
+# Making and Commiting Changes
+# ============================
+#
+# While you are developing your feature follow this workflow to manage your local 
+# copy of the development repo. Your development branch should also be kept up to 
+# date on the GitHub server until it is ready to be merged back ito the master stream.
+
+# Make some changes -- Repeat these commands after every logical grouping of changes
+>git add -A
+>git commit -m 'Comment'
+
+# At the end of each coding session -- After adding and commiting changes
+>git push -u origin <feature-name>
+# or just
+>git push
+
+# At the beginning of each coding session while working on the same feature
+>git pull origin <feature-name>
+>git status
+
+
+# Merging Your Branch With The Master
+# ===================================
+#
+# Once you have completed your feature you will need to merge it back into the 
+# master stream. 
+#
+# An optional step is to publish a "Pull Request" through the GitHub web interface 
+# and let other members of the development team know that your feature is finished 
+# and that they should review your changes.
+#
+# Commands to merge the branch into the master repo on GitHub are as follows:
+>git checkout master
+>git pull origin mastergit push -u 
+>git pull origin <feature-name>
+>git push origin master
+
+
+# Managing Conflicts
+# ==================
+#
+# If your local copy is badly out of sync with the master repo then you will get 
+# error messages when you try to "push" your changes. Follow these steps to fix the 
+# conflicts in your local copy so that you can safely merge them with the master repo.
+
+>git pull --rebase origin master
+
+# Git will begin merging your changes and when it encounters a problem it will
+# issue a CONFLICT message and pause the merge. You need to fix the file(s) and restart 
+# the merge as follows:
+>git status
+# Use Eclipse to edit and fix the files reported in the status output
+>git add <fixed-files>
+>git rebase --continue
+# When the rebase completes
+>git push origin master
+
+# If you cannot resolve the conflicts and need to abort
+>git rebase --abort
+
+
+### END ###

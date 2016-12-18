@@ -1,0 +1,45 @@
+Workflow for synchronizing your local repository with the central repository's master branch.
+>git status
+
+>git add -A
+>git commit -m 'Comment'
+
+>git fetch origin
+>git log --oneline master..origin/master
+
+>git checkout master
+>git log origin/master
+
+>git merge origin/master
+
+>git push origin master
+
+
+
+
+
+
+How to make local changes and merge later with master repo
+
+>git status
+
+>git branch [name of branch]
+>git checkout [name of branch]
+
+>git status
+
+[make changes]
+
+>git add -A
+>git commit -m 'Comment'
+
+
+>git checkout master
+>git merge [name of branch]
+
+>git branch -d [name of branch]
+
+>git status
+
+>git push origin master
+
