@@ -1,0 +1,52 @@
+This is a HowTo for frequent commands used through the Git Command Shell
+========================================================================
+
+List of useful shell commands
+-----------------------------
+
+To show where you are (print working directory)
+>pwd
+
+To list files and folders in your current directory.
+To figure out where to go next,
+>ls
+
+To change or move to a new folder / directory
+>cd
+
+
+Changing to your Workspace Directory
+------------------------------------
+All of the following git commands assume that you are in the proper
+workspace directory
+>cd C:\Users\[yourId]\workspace
+>cd TestBotB2017
+>pwd
+*** NOTE: The root workspace on the Team5519 Lenovo laptop is
+>cd C:\Users\Public\5519Workspaces
+
+
+To Clone An Existing GitHub Repository [For The First Time]
+-----------------------------------------------------------
+This should only be done once when setting up your environment for the first time.
+>cd C:\Users\[yourId]\workspace
+>git clone https://github.com/Team5519/TestBotB2017.git
+
+
+To Save Local Changes to GitHub
+-------------------------------
+This should always be done at the end of a coding session. 
+>cd C:\Users\[yourId]\workspace\TestBotB2017
+>git add -A
+>git commit -m "comment"
+>git push origin master
+
+
+To Get Most Recent Changes From GitHub
+--------------------------------------
+This should always be done before you begin a new coding session.
+>cd C:\Users\[yourId]\workspace\TestBotB2017
+>git pull
+
+**END**
+
