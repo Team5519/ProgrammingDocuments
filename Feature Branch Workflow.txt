@@ -66,7 +66,7 @@ https://www.atlassian.com/git/tutorials/comparing-workflows
 #
 # Commands to merge the branch into the master repo on GitHub are as follows:
 >git checkout master
->git pull origin mastergit push -u 
+>git pull origin master 
 >git pull origin <feature-name>
 >git push origin master
 
